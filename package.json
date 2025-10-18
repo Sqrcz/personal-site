@@ -10,7 +10,9 @@
     "lint": "eslint . --ext .js,.ts,.astro"
   },
   "dependencies": {
-    "astro": "^5.14.5"
+    "@tailwindcss/vite": "^4.1.14",
+    "astro": "^5.14.5",
+    "tailwindcss": "^4.1.14"
   },
   "devDependencies": {
     "@eslint/js": "^9.37.0",

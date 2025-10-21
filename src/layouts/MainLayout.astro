@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css'
+
+import { SimpleAnalytics } from 'astro-simpleanalytics-plugin'
 ---
 
 <!doctype html>
@@ -12,6 +14,7 @@ import '../styles/global.css'
   </head>
   <body>
     <slot />
+    <SimpleAnalytics />
   </body>
 </html>
 

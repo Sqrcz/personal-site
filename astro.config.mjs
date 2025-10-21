@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config'
+import matomo from 'astro-matomo'
 
 import tailwindcss from '@tailwindcss/vite'
 
@@ -11,5 +12,19 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  adapter: netlify()
+  adapter: netlify(),
+
+  integrations: [
+    matomo({
+      disableCookies: true,
+      enabled: import.meta.env.PROD,
+      heartBeatTimer: 5,
+      host: "https://analytics.slashlab.pl/",
+      setCookieDomain: "*.slashlab.pl",
+      siteId: 1,
+      viewTransition: {
+        contentElement: "main"
+      }
+    }),
+  ]
 })

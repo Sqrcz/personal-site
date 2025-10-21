@@ -17,6 +17,9 @@ importers:
       astro:
         specifier: ^5.14.7
         version: 5.14.7(@netlify/blobs@10.1.0)(@types/node@24.8.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.52.4)(typescript@5.9.3)(yaml@2.8.1)
+      astro-matomo:
+        specifier: ^1.9.0
+        version: 1.9.0(astro@5.14.7(@netlify/blobs@10.1.0)(@types/node@24.8.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.52.4)(typescript@5.9.3)(yaml@2.8.1))
       astro-simpleanalytics-plugin:
         specifier: ^0.3.20
         version: 0.3.20(@netlify/blobs@10.1.0)(@types/node@24.8.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.52.4)(typescript@5.9.3)(yaml@2.8.1)
@@ -1504,6 +1507,11 @@ packages:
   astro-eslint-parser@1.2.2:
     resolution: {integrity: sha512-JepyLROIad6f44uyqMF6HKE2QbunNzp3mYKRcPoDGt0QkxXmH222FAFC64WTyQu2Kg8NNEXHTN/sWuUId9sSxw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  astro-matomo@1.9.0:
+    resolution: {integrity: sha512-eOmhDHvqjrasJvhaKTSEZIMk9pW/3OcqYS6VVGOQBrEg33H1/Mk62sJuv2dxmsg3cNTDwm2rlZlw9r18KNgYnw==}
+    peerDependencies:
+      astro: ^2.0.0-beta.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
 
   astro-simpleanalytics-plugin@0.3.20:
     resolution: {integrity: sha512-kprsPQxAFDZHsvwrJAw3ZmCRHL1OYoyjXueRTW/tTdHQ1lZAm34pjFygF4+oXGm9sEdK6gRIWVNoaBqnShjh5g==}
@@ -5520,6 +5528,10 @@ snapshots:
       semver: 7.7.3
     transitivePeerDependencies:
       - supports-color
+
+  astro-matomo@1.9.0(astro@5.14.7(@netlify/blobs@10.1.0)(@types/node@24.8.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.52.4)(typescript@5.9.3)(yaml@2.8.1)):
+    dependencies:
+      astro: 5.14.7(@netlify/blobs@10.1.0)(@types/node@24.8.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.52.4)(typescript@5.9.3)(yaml@2.8.1)
 
   astro-simpleanalytics-plugin@0.3.20(@netlify/blobs@10.1.0)(@types/node@24.8.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.52.4)(typescript@5.9.3)(yaml@2.8.1):
     dependencies:

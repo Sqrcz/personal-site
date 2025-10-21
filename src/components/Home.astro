@@ -1,10 +1,82 @@
 ---
-
+import GithubIcon from '../assets/icons/github.svg'
+import LinkedinIcon from '../assets/icons/linkedin.svg';
 ---
 
-<main class="bg-slate-100 shadow-lg p-20 rounded-lg text-slate-700 text-center container">
-...
+<main>
+  <article class="relative m-5 p-0.5 rounded-lg max-w-[500px] card">
+    <div class="bg-sky-800 selection:bg-sky-200 p-5 rounded-[inherit] selection:text-sky-800 text-center content">
+      <header>
+        <h1 class="text-4xl">Tomek Naorniakowski</h1>
+        <h2 class="opacity-65 mb-5 text-md">Fullstack Web Developer</h2>
+      </header>
+      <pre></pre>
+      <p class="mb-5">
+        Hi! I'm Tomek, a fullstack web developer with a frontend focus. I build robust, elegant digital experiences, specializing in internal tools that help teams work smarter from the inside out.
+        <span class="block mt-2.5">Always happy to connect—reach out anytime.</span>
+      </p>
+      <footer class="flex justify-end gap-4 text-sky-200">
+        <a href="https://github.com/Sqrcz" class="opacity-75 hover:opacity-100 transition duration-300">
+          <GithubIcon class="size-6" />
+        </a>
+        <a href="https://www.linkedin.com/in/naorniakowski" class="opacity-75 hover:opacity-100 transition duration-300">
+          <LinkedinIcon class="size-6" />
+        </a>
+      </footer>
+    </div>
+  </article>
 </main>
 
 <style>
+  :root {
+    --neon-color-a: rgba(255, 255, 255, 1);
+    --neon-color-b: rgba(255, 255, 255, 1);
+  }
+
+  @property --angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+  }
+  @property --color {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: rgba(255, 255, 255, 1);
+  }
+
+  .card::before,
+  .card::after {
+    --angle: 0deg;
+    --color: var(--neon-color-a);
+    animation: rotate 5s linear infinite;
+    background: conic-gradient(from var(--angle), var(--color), transparent, var(--color));
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.75;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .card::after {
+    filter: blur(0px) brightness(1);
+  }
+
+  @keyframes rotate {
+    0% {
+      --angle: 0deg;
+      --color: var(--neon-color-a);
+    }
+    50% {
+      --angle: 180deg;
+      --color: var(--neon-color-b);
+    }
+    100% {
+      --angle: 360deg;
+      --color: var(--neon-color-a);
+    }
+  }
 </style>

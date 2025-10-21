@@ -8,9 +8,9 @@ import '../styles/global.css'
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title></title>
+    <title>Tomek Naorniakowski - Fullstack Web Developer</title>
   </head>
-  <body class="flex flex-col justify-center items-center bg-slate-200 p-10 min-h-screen">
+  <body>
     <slot />
   </body>
 </html>
@@ -18,7 +18,17 @@ import '../styles/global.css'
 <style>
   @reference '../styles/global.css';
 
+  :root {
+    --color-a: #38bdf8;
+    --color-b: #f0f9ff;
+  }
+
   html, body {
-    @apply w-screen h-screen;
+    @apply w-screen h-dvh;
+  }
+
+  body {
+    @apply place-items-center grid font-inter font-extralight text-white;
+    background-image: radial-gradient(circle,  var(--color-a), var(--color-b));
   }
 </style>

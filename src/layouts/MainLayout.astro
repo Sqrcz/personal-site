@@ -14,7 +14,9 @@ import { SimpleAnalytics } from 'astro-simpleanalytics-plugin'
   </head>
   <body>
     <slot />
-    <SimpleAnalytics />
+    <div class="hidden">
+      <SimpleAnalytics />
+    </div>
   </body>
 </html>
 
